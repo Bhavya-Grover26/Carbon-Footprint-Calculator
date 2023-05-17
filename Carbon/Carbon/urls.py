@@ -22,4 +22,4 @@ urlpatterns = [
     path('',include('accounts.urls'))
 ]
 
-
+urlpatterns += staticfiles_urlpatterns()
