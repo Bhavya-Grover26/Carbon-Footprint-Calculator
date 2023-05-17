@@ -1,0 +1,101 @@
+{% load static %}
+{% include 'accounts./navbar.html' %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/reduces.css' %}">
+
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Reduce</title>
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Reduce your Carbon Footprint</header>
+      <form action="#" class="form">
+        <div>
+          <div class="tag">Purchase alternative fuel vehicle
+            <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" data-value="1" /><label for="checkbox-1-1"></label>
+      </div>
+      <div>
+        <div class="tag">Purchase electric vehicle
+          <input type="checkbox" id="checkbox-1-2" class="regular-checkbox" data-value="1"/><label for="checkbox-1-2"></label>
+    </div>
+    <div>
+        <div class="tag">Telecommute to work
+          <input type="checkbox" id="checkbox-1-3" class="regular-checkbox" data-value="1"/><label for="checkbox-1-3"></label>
+    </div>
+    <div>
+      <div class="tag">Take public transportation
+        <input type="checkbox" id="checkbox-1-4" class="regular-checkbox" data-value="1"/><label for="checkbox-1-4"></label>
+  </div>
+  <div>
+    <div class="tag">Reduce air travel
+      <input type="checkbox" id="checkbox-1-5" class="regular-checkbox" data-value="1"/><label for="checkbox-1-5"></label>
+  </div>
+  <div>
+    <div class="tag">Switch to CFLs or LEDs
+      <input type="checkbox" id="checkbox-1-6" class="regular-checkbox" data-value="1"/><label for="checkbox-1-6"></label>
+  </div>
+  <div>
+    <div class="tag">Reduce summer household aircon
+      <input type="checkbox" id="checkbox-1-7" class="regular-checkbox" data-value="1"/><label for="checkbox-1-7"></label>
+  </div>
+  <div>
+    <div class="tag">Use rechargeable batteries
+      <input type="checkbox" id="checkbox-1-8" class="regular-checkbox" data-value="1"/><label for="checkbox-1-8"></label>
+  </div>
+  <div>
+    <div>
+      <div class="tag">Recycle Newspaper
+        <input type="checkbox" id="checkbox-1-9" class="regular-checkbox" data-value="1"/><label for="checkbox-1-9"></label>
+    </div>
+    <div>
+      <div class="tag">Recycle Aluminium/Tin
+        <input type="checkbox" id="checkbox-1-10" class="regular-checkbox" data-value="1"/><label for="checkbox-1-10"></label>
+    </div>
+    <div class="tag">Plant trees
+      <input type="checkbox" id="checkbox-1-11" class="regular-checkbox" data-value="1"/><label for="checkbox-1-11"></label>
+  </div>
+  <div>
+    <div class="tag">Eat a low carbon diet
+      <input type="checkbox" id="checkbox-1-12" class="regular-checkbox" data-value="1"/><label for="checkbox-1-12"></label>
+  </div>
+      <div>
+        <div id="score-container"></div>
+        <button type="button" id="calculate-score">Calculate Score</button>
+        
+      </form>
+    </section>
+
+    <script>
+      document.getElementById("calculate-score").addEventListener("click", function() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var score = 0;
+        checkboxes.forEach(function(checkbox) {
+          if (checkbox.checked) {
+            var value = checkbox.getAttribute("data-value");
+            score += value ? parseInt(value) : 0;
+          }
+        });
+        var scoreContainer = document.getElementById("score-container");
+        scoreContainer.textContent = "Score: " + score;
+        scoreContainer.style.color = "red"; 
+        scoreContainer.style.fontWeight = "bold"; 
+        scoreContainer.style.fontSize = "30px";
+        // Add any other desired styling properties
+      });
+    </script>
+    
+
+
+    
+
+  </body>
+</html>
+
