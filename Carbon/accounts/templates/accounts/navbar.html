@@ -112,13 +112,12 @@
   <label for="check" class="checkbtn">
     <i class="fas fa-bars"></i>
   </label>
-  <label class="logo">CarbonTrace
+  <label class="logo"><a href="{% url 'home' %}" style="color: #fff; font-family: 'Times New Roman', sans-serif;">CarbonTrace</a>
     <i class="fa fa fa-seedling  "></i>
   </label>
   <ul>
-    <li><a href="http://127.0.0.1:8000/howitworks/">How it works</a></li>
-    <li><a href="http://127.0.0.1:8000/option/">Calculate</a></li>
-    <li><a href="http://127.0.0.1:8000/request/">Request</a></li>
-    <li><a href="http://127.0.0.1:8000/login/">Login/Register</a></li>
+    <li><a href="{% url 'howitworks' %}">How it works</a></li>
+    <li><a href="{% url 'option' %}">Calculate</a></li>
+    <li><a href="{% url 'request' %}">Request</a></li>
   </ul>
 </nav>
