@@ -157,7 +157,7 @@
 					<br/>
 					<br/>
 					<br/>
-					<button id="recalculate-btn" type="button" class="btn btn-success btn-lg btn-block"><a href="http://127.0.0.1:8000/reduces/">Learn ways to reduce</button></button></a>
+					<button id="recalculate-btn" type="button" class="btn btn-success btn-lg btn-block"><a href="{% url 'organisationreduces' %}">Learn ways to reduce</button></a>
 				</div>
 			</div>	
 			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -277,9 +277,9 @@ $(document).ready(function() {
 			}
 
 			if (recycleghgSelectionYes == false && recycleghgSelectionNo == false) {
-				$("#alum-tin-alert").show();
+				$("#ghg-alert").show();
 			} else {
-				$("#alum-tin-alert").hide();
+				$("#ghg-alert").hide();
 			}
 		} else {
 			calculateAndDisplayScore();

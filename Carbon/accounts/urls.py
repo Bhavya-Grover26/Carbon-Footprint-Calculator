@@ -19,6 +19,7 @@ urlpatterns = [
     path('organisation/',views.organisation, name='organisation'),
     path('leaderboard/',views.leaderboard),
     path('howitworks/',views.howitworks, name='howitworks'),
+    path('organisationreduces/',views.organisationreduces, name='organisationreduces'),
 ]   
 
 

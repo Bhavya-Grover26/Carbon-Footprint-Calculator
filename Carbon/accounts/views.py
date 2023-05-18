@@ -52,6 +52,9 @@ def organisation(request):
 def reduces(request):
     return render(request,'accounts/reduces.html')
 
+def organisationreduces(request):
+    return render(request,'accounts/organisationreduces.html')
+
 def leaderboard(request):
     return render(request,'accounts/leaderboard.html')
 

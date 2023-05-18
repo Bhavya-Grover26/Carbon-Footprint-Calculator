@@ -1,0 +1,228 @@
+<style>
+    /* Import Google font - Poppins */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+  }
+  
+  .container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    background: #fff;
+    padding: 20px 0px 0px 100px;
+    border-radius: 8px;
+  }
+  .container header {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+  }
+  .container .form {
+    margin-top: 30px;
+  }
+  .form .input-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .input-box label {
+    color: #333;
+  }
+  .form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+  }
+  .input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  .form .column {
+    display: flex;
+    column-gap: 15px;
+  }
+  .form .gender-box {
+    margin-top: 20px;
+  }
+  .gender-box h3 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+  }
+  .form .gender {
+    column-gap: 5px;
+  }
+  .gender input {
+    accent-color: #2b6422;
+  }
+  .form :where(.gender input, .gender label) {
+    cursor: pointer;
+  }
+  .gender label {
+    color: #707070;
+  }
+  .address :where(input, .select-box) {
+    margin-top: 15px;
+  }
+  .select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+  }
+  .form button {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #2b6422;
+  }
+  .form button:hover {
+    background: #87c37e;
+  }
+  /*Responsive*/
+  @media screen and (max-width: 500px) {
+    .form .column {
+      flex-wrap: wrap;
+    }
+    .form :where(.gender-option, .gender) {
+      row-gap: 15px;
+    }
+  }
+  
+  .score-text {
+    color: red;
+    font-weight: bold;
+    /* Add any other desired styles for the score element */
+  }
+  
+  
+  
+  </style>
+  
+  
+  {% include 'accounts/navbar.html' %}
+  
+  
+  <!DOCTYPE html>
+  <!---Coding By CodingLab | www.codinglabweb.com--->
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Reduce</title>
+      <!---Custom CSS File--->
+      <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+      <section class="container">
+        <header>Reduce your Carbon Footprint</header>
+        <form action="#" class="form">
+          <div>
+            <div class="tag">Purchase alternative fuel vehicle
+              <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" data-value="1" /><label for="checkbox-1-1"></label>
+        </div>
+        <div>
+          <div class="tag">Purchase electric vehicle
+            <input type="checkbox" id="checkbox-1-2" class="regular-checkbox" data-value="1"/><label for="checkbox-1-2"></label>
+      </div>
+      <div>
+          <div class="tag">Reduce Energy Use
+            <input type="checkbox" id="checkbox-1-3" class="regular-checkbox" data-value="1"/><label for="checkbox-1-3"></label>
+      </div>
+      <div>
+        <div class="tag">Eliminate Single-use Plastics
+          <input type="checkbox" id="checkbox-1-4" class="regular-checkbox" data-value="1"/><label for="checkbox-1-4"></label>
+    </div>
+    <div>
+      <div class="tag">Set Carbon Reduction Targets
+        <input type="checkbox" id="checkbox-1-5" class="regular-checkbox" data-value="1"/><label for="checkbox-1-5"></label>
+    </div>
+    <div>
+      <div class="tag">Switch to CFLs or LEDs
+        <input type="checkbox" id="checkbox-1-6" class="regular-checkbox" data-value="1"/><label for="checkbox-1-6"></label>
+    </div>
+    <div>
+      <div class="tag">Invest in renewable energy
+        <input type="checkbox" id="checkbox-1-7" class="regular-checkbox" data-value="1"/><label for="checkbox-1-7"></label>
+    </div>
+    <div>
+      <div class="tag">Use rechargeable batteries
+        <input type="checkbox" id="checkbox-1-8" class="regular-checkbox" data-value="1"/><label for="checkbox-1-8"></label>
+    </div>
+    <div>
+      <div>
+        <div class="tag">Implement waste reduction
+          <input type="checkbox" id="checkbox-1-9" class="regular-checkbox" data-value="1"/><label for="checkbox-1-9"></label>
+      </div>
+      <div>
+        <div class="tag">Switch to smart shipping
+          <input type="checkbox" id="checkbox-1-10" class="regular-checkbox" data-value="1"/><label for="checkbox-1-10"></label>
+      </div>
+      <div class="tag">Utilise Fairtrade
+        <input type="checkbox" id="checkbox-1-11" class="regular-checkbox" data-value="1"/><label for="checkbox-1-11"></label>
+    </div>
+    <div>
+      <div class="tag">Conduct regular carbon footprint assessments
+        <input type="checkbox" id="checkbox-1-12" class="regular-checkbox" data-value="1"/><label for="checkbox-1-12"></label>
+    </div>
+        <div>
+          <div id="score-container"></div>
+          <button type="button" id="calculate-score">Calculate Score</button>
+          
+        </form>
+      </section>
+  
+      <script>
+        document.getElementById("calculate-score").addEventListener("click", function() {
+          var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+          var score = 0;
+          checkboxes.forEach(function(checkbox) {
+            if (checkbox.checked) {
+              var value = checkbox.getAttribute("data-value");
+              score += value ? parseInt(value) : 0;
+            }
+          });
+          var scoreContainer = document.getElementById("score-container");
+          scoreContainer.textContent = "Score: " + score;
+          scoreContainer.style.color = "red"; 
+          scoreContainer.style.fontWeight = "bold"; 
+          scoreContainer.style.fontSize = "30px";
+          // Add any other desired styling properties
+        });
+      </script>
+      
+  
+  
+      
+  
+    </body>
+  </html>
+  
+  
